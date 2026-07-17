@@ -26,13 +26,13 @@ async function ProductsContainer({layout,search}:{layout:string,search:string}) 
                 <div className='flex gap-4'>
 
                     <Button asChild size={'icon'} variant={layout=== 'grid'? 'default' : 'outline'}>
-                        <Link href={`${links.PRODUCTE.href}?layout=grid${SearchTerm}`}>
+                        <Link href={`${links.PRODUCTS.href}?layout=grid${SearchTerm}`}>
                             <LuLayoutGrid />
                         </Link>
                     </Button>
 
                     <Button asChild size={'icon'} variant={layout === 'list'? 'default': 'outline'}>
-                        <Link href={`${links.PRODUCTE.href}?layout=list${SearchTerm}`}>
+                        <Link href={`${links.PRODUCTS.href}?layout=list${SearchTerm}`}>
                             <LuList />
                         </Link>
                     </Button>

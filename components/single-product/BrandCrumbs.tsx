@@ -10,7 +10,7 @@ import {
 import { links } from '../../utils/links';
 
 function BreadCrumbs({name}:{name:string}) {
-  console.log(name);
+  
   return (
     <Breadcrumb>
   <BreadcrumbList>
@@ -22,7 +22,7 @@ function BreadCrumbs({name}:{name:string}) {
     <BreadcrumbSeparator />
 
     <BreadcrumbItem>
-      <BreadcrumbLink href={links.PRODUCTE.href} className='capitalize text-lg'>Products</BreadcrumbLink>
+      <BreadcrumbLink href={links.PRODUCTS.href} className='capitalize text-lg'>Products</BreadcrumbLink>
     </BreadcrumbItem>
 
     <BreadcrumbSeparator />

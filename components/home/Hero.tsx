@@ -3,6 +3,7 @@ import HeroCarousel  from './HeroCarousel';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import {LodingHero} from '../global/LodingContainer';
+import { links } from '@/utils/links';
 function Hero() {
   return (
     <section className='grid grid-cols-1 lg:grid-cols-2 item-center gap-24 pt-24'>
@@ -19,7 +20,7 @@ function Hero() {
         </p>
 
         <Button asChild className='mt-8 text-white bg-blue-500' size={'lg'}>
-            <Link href={'/producte'}>
+            <Link href={links.PRODUCTS.href}>
                 Our Products
             </Link>
         </Button>

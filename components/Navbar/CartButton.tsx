@@ -11,7 +11,7 @@ function CartButton() {
     className=' flex justify-center items-center relative'
     size='icon'>
 
-      <Link href={links.Cart.href}>
+      <Link href={links.CART.href}>
         <LuShoppingCart/>
         <span className='absolute -top-3 -right-3 bg-blue-500 text-white rounded-full w-5 h-5 flex justify-center items-center text-xs'>
           2

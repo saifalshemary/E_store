@@ -20,18 +20,18 @@ function ProductsGrid({products}:{products:product[]}) {
 
                     return(
                         <div className='groub relative' key={product.id}>
-                <Link href={`${links.PRODUCTE.href}/${productsId}`}>
-                <Card className='transform group-jover:shadow-xl transition-shadow duration-500'>
+                <Link href={`${links.PRODUCTS.href}/${productsId}`}>
+                <Card className='transform groub-hover:shadow-xl transition-shadow duration-500'>
                     <CardContent>
-                        <div className='relative h-64 md:h-48 rouned overfolw-hidden'>
-                            <Image 
-                                src={product.image}
-                                alt='Product_img'
-                                className='object-cover'
-                                fill
-                                priority
-                                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw , 33vw'
-                            />
+                        <div className='relative h-64 md:h-48 rounded overflow-hidden'>
+                            <Image  
+                          src={product.image} 
+                          alt='products_img '
+                          fill
+                          priority
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className='object-cover'
+                          />
                         </div>
                         <div className='text-center mt-4'>
                             <h2 className='text-lg capitalize'>{product.name}</h2>

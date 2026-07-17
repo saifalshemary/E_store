@@ -19,7 +19,7 @@ function ProductsList({Products}:{Products:product[]}) {
        
        return(
          <div className='relative group' key={id}>
-        <Link href={`${links.PRODUCTE.href}/${id}`}>
+        <Link href={`${links.PRODUCTS.href}/${id}`}>
           <Card className='transform group-hover:shadow-lg transitions-shadow duratin-500'>
             <CardContent className='p-8 gap-y-4 grid md:grid-cols-3'>
               <div className='relative h-64 md:h-48 md:w-48'>
