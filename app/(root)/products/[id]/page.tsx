@@ -14,7 +14,7 @@ import ProductReviews from '@/components/reviews/ProductReviews';
 
 
 
-async function ProductDetailsPage({ params }:  any) {
+async function ProductDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   
   try {

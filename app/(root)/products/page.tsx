@@ -5,7 +5,7 @@ import React from 'react';
 
 
 
-async function ProductsPage({ searchParams }: any) {
+async function ProductsPage({ searchParams }: { searchParams: Promise<any> }) {
   const { layout = 'grid', search = '' } = await searchParams || {};
 
   return (

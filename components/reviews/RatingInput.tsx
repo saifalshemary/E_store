@@ -13,7 +13,7 @@ import {
 import { array, number } from 'zod'
 
 
-function RatingInput({name,labelText}:{name:string,labelText:string}) {
+function RatingInput({name,labelText}:{name:string,labelText?:string}) {
     const Numbers = Array.from({length:5},(_,i)=>{
         const value = i+1 
         return value.toString()

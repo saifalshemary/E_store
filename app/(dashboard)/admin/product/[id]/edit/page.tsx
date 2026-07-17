@@ -13,7 +13,7 @@ import ImageInputContainer from '@/components/admin/products/imageInputContainer
 
 
 
-async function EditProductPage({params}: {params: {id: string}}) {
+async function EditProductPage({params}: {params: Promise<{id: string}>}) {
   
   const {id} = await params;
   const product = await fetchSinglProducts(id);

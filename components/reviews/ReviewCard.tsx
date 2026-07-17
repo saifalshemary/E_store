@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Rating from './Rating';
 import Image from 'next/image';
-import Comment from './comment';
 
 type props ={
   review_info: {

@@ -23,7 +23,7 @@ function NavSearsh() {
       params.delete('search')
     }
 
-    replace(`${links.PRODUCTE.href}?${params.toString()}`)
+    replace(`${links.PRODUCTS.href}?${params.toString()}`)
   },300)
 
   
