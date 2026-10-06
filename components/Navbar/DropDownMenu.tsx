@@ -23,41 +23,40 @@ async function DropDownMenu() {
     <>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-       <Button variant={'outline'} size={'icon'} className='flex gap-3 max-w-[100px] w-[80PX]'>
-        <LuAlignLeft/>
-        <UserIcon/>
+       <Button variant={'outline'} className='flex items-center gap-1.5 sm:gap-2.5 px-2 sm:px-3 h-9 w-auto sm:w-[76px]'>
+        <LuAlignLeft className="h-4 w-4 shrink-0" />
+        <UserIcon />
        </Button>
         </DropdownMenuTrigger>
 
         <DropdownMenuContent>
             <SignedOut>
-              <DropdownMenuItem className='flex flex-col gap-2'>
+              <DropdownMenuItem asChild>
                 <SignInButton mode='modal'>
-                  <Button className='w-full'>
+                  <button className='w-full text-left px-2 py-1.5 text-sm cursor-pointer rounded-sm hover:bg-accent transition-colors'>
                     Sign In
-                  </Button>
+                  </button>
                 </SignInButton>
-                <SignUpButton mode='modal' >
-                  <Button className='w-full' variant={'outline'}>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <SignUpButton mode='modal'>
+                  <button className='w-full text-left px-2 py-1.5 text-sm cursor-pointer rounded-sm hover:bg-accent transition-colors'>
                     Sign Up
-                  </Button>
+                  </button>
                 </SignUpButton>
               </DropdownMenuItem>
             </SignedOut>
             <SignedIn>
               {DrobDown.map((link) => {
-
-              if(link.name === 'dashboard' && !IsAdmin) return null;
+                if (link.name === 'dashboard' && !IsAdmin) return null;
                 return (
-              <DropdownMenuItem key={link.name}>
-                <Link href={link.href }>
-                {link.name}
-                </Link>
-                
-              </DropdownMenuItem>
-            )
-              }
-            )}
+                  <DropdownMenuItem key={link.name} asChild>
+                    <Link href={link.href} className='w-full cursor-pointer'>
+                      {link.name}
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
              
             <DropdownMenuSeparator />
             <DropdownMenuItem>

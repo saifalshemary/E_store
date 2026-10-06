@@ -27,7 +27,7 @@ function DarkMode() {
         
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem onClick={()=> setTheme("ligth")}>Ligth</DropdownMenuItem>
+          <DropdownMenuItem onClick={()=> setTheme("light")}>Light</DropdownMenuItem>
           <DropdownMenuItem onClick={()=> setTheme("dark")}>Dark</DropdownMenuItem>
           <DropdownMenuItem onClick={()=> setTheme("system")}>System</DropdownMenuItem>
         </DropdownMenuContent>

@@ -8,11 +8,11 @@ function SingOut() {
     toast("Sign Out ...")
   }
   return (
-  <SignOutButton>
-      <Link href={'/'} className='w-full text-left' onClick={handelLogout}>
+    <SignOutButton redirectUrl='/'>
+      <button className='w-full text-left cursor-pointer' onClick={handelLogout}>
         Sign Out
-      </Link>
-  </SignOutButton >
+      </button>
+    </SignOutButton>
   )
 }
 

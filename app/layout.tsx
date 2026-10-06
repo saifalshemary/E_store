@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 import Navbar from "../components/Navbar/Navbar";
 import Container from "../components/global/container";  
+import Footer from "../components/footer/Footer";
 import { ThemeProvider } from "../components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs"
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
    <ClerkProvider>
        <html lang="en" suppressHydrationWarning>
-            <body>
+            <body className="min-h-screen flex flex-col antialiased">
 
             <ThemeProvider
                 attribute="class"
@@ -29,14 +30,15 @@ export default function RootLayout({
                 disableTransitionOnChange>
                 <Navbar/>
 
-            <Container className="pt-12">
-              
-              {children}
-              <Toaster />
-            </Container>
+                <main className="flex-1">
+                  <Container className="pt-12">
+                    {children}
+                    <Toaster />
+                  </Container>
+                </main>
 
+                <Footer />
             </ThemeProvider>
-              
               
             </body>
         </html>

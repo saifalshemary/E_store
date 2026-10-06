@@ -1,10 +1,12 @@
 import { SignUp } from '@clerk/nextjs'
 import React from 'react'
 
-function page() {
+function SignUpPage() {
   return (
-    <SignUp />    
-)
+    <div className='flex min-h-[calc(100vh-14rem)] items-center justify-center py-10'>
+      <SignUp />
+    </div>
+  )
 }
 
-export default page
+export default SignUpPage

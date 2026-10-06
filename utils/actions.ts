@@ -6,7 +6,7 @@ import { currentUser } from '@clerk/nextjs/server';
 import { productSchema, validateSchema , imageSchema ,reviewSchema, heroSchema } from './schema';
 import { deleteImage, uploadImage } from './supabase';
 import { revalidatePath } from 'next/cache';
-import { links } from '@/utils/links'
+import { links } from '@/utils/links';
 
 
 export async function fetchFeaturedProducts() {
@@ -369,4 +369,39 @@ export async function updateProductAction(prevState: any, formData: FormData) {
     }
 
     return { message: "Hero created successfully!" };
+  }
+
+  export const FetchPrice = async (productID:string) =>{
+
+    try{
+      const amountProduct = await db.product.findUnique({
+        where:{
+          id: productID
+        },
+        select:{
+          price:true
+        }
+      })
+      return amountProduct?.price || 0
+    }
+    catch(e){
+      return renderError(e);
+    }
+  }
+  export const FetchName = async (productID:string) =>{
+
+    try{
+      const product = await db.product.findUnique({
+        where:{
+          id: productID
+        },
+        select:{
+          name:true
+        }
+      })
+      return product?.name || 0
+    }
+    catch(e){
+      return renderError(e);
+    }
   }

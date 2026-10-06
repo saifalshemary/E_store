@@ -8,15 +8,14 @@ import { FaRegHeart } from 'react-icons/fa'
 
 function CardSingButton() {
   return (
-    <SignInButton mode='modal'  >
-        <Button 
+    <SignInButton mode='modal'>
+      <Button 
         size={'icon'}
         type='button'
-        asChild
-        className='bg-gray-700 hover:bg-gray-9-- hover:cursor-pointer text-white p-3 rounded-xl'
-        >
-            <FaRegHeart />
-        </Button>
+        className='bg-gray-700 hover:bg-gray-900 hover:cursor-pointer text-white p-3 rounded-xl'
+      >
+        <FaRegHeart />
+      </Button>
     </SignInButton>
   )
 }
